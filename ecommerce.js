@@ -1,5 +1,5 @@
-const botonUsuario = document.querySelector('#btn-enviar-u');
-const botonListUsuario = document.querySelector('#btn-listado-u');
+// const botonUsuario = document.querySelector('#btn-enviar-u');
+// const botonListUsuario = document.querySelector('#btn-listado-u');
 const botonEnviarPr = document.querySelector('#btn-enviar-pr');
 const botonListadoPr = document.querySelector('#btn-listado-pr');
 const tablaListado = document.querySelector('#tabla-listado');
@@ -17,26 +17,26 @@ class Usuario {
 
 var users = [];
 
-botonUsuario.onclick = (function() {
-    nombre = document.querySelector('#nombre');
-    apellido = document.querySelector('#apellido');
-    email = document.querySelector('#email');
-    tel = document.querySelector('#telefono');
-    let user = new Usuario(nombre.value, apellido.value, email.value, tel.value);
-    users.push(user);
-    nombre.value = '';
-    apellido.value = '';
-    email.value = '';
-    tel.value = '';
-    return false;
-});
+// botonUsuario.onclick = (function() {
+//     nombre = document.querySelector('#nombre');
+//     apellido = document.querySelector('#apellido');
+//     email = document.querySelector('#email');
+//     tel = document.querySelector('#telefono');
+//     let user = new Usuario(nombre.value, apellido.value, email.value, tel.value);
+//     users.push(user);
+//     nombre.value = '';
+//     apellido.value = '';
+//     email.value = '';
+//     tel.value = '';
+//     return false;
+// });
 
-botonListUsuario.onclick = (function() {
-    for(let i = 0; i < users.length; i++){
-    document.querySelector('#list-usuarios').outerHTML += `<h2>${users[i].nombre} ${users[i].apellido}</h2>`;
-    }
-    return false;
-});
+// botonListUsuario.onclick = (function() {
+//     for(let i = 0; i < users.length; i++){
+//     document.querySelector('#list-usuarios').outerHTML += `<h2>${users[i].nombre} ${users[i].apellido}</h2>`;
+//     }
+//     return false;
+// });
 
 let productos = [
     {
@@ -53,7 +53,23 @@ let productos = [
         descripcion: 'Torta 3',
         precio: 300,
         imagen: "https://www.mateargentino.info/fotos/paginas/torta-rapida.jpg",
-    }
+    },
+    {
+        descripcion: 'Torta 4',
+        precio: 200,
+        imagen: "https://source.unsplash.com/kPxsqUGneXQ/400x300"
+    },
+    {
+        descripcion: 'Torta 5',
+        precio: 600,
+        imagen: "https://source.unsplash.com/vdx5hPQhXFk/400x300"
+    },
+    {
+        descripcion: 'Torta 6',
+        precio: 360,
+        imagen: "https://source.unsplash.com/YpIKbBZtSWY/400x300"
+    },
+    
    ];
 
 function mostrarProductos () {
