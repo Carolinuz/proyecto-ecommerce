@@ -63,7 +63,7 @@ display:block;
     background-color: gray;
     display: flex;
     justify-content: flex-end;
-    height: 4.2rem;
+    height: 4.4rem;
 }
 .heading {
     
@@ -83,7 +83,7 @@ display:block;
 }
 h2 {
     font-family: 'Baloo Tamma 2', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #4d8a96;
 }
 
@@ -123,4 +123,8 @@ h2 {
 .card {
     display: inline-flex;
     margin-right: 4rem;
+}
+
+.productos {
+    text-align: center;
 }
