@@ -58,9 +58,7 @@ let productos = [
 
 function mostrarProductos () {
     for(let i = 0; i < productos.length; i++){
-    document.querySelector('#list-productos').outerHTML += `<h2>Producto: ${productos[i].descripcion} Precio: ${productos[i].precio}</h2>
-    <img src="${productos[i].imagen}">
-    <button id="agregar-carrito" class="boton-carrito" type="button">Agregar al carrito</button>`;
+    document.querySelector('#list-productos').outerHTML += `<div class="card" style="width: 25rem;"><img class="card-img-top" src="${productos[i].imagen}" alt="Card image cap"><div class="card-body"><h5 class="card-title">${productos[i].descripcion}</h5><p class="card-text">Precio: ${productos[i].precio}</p><a href="#" class="btn btn-primary boton-carrito">Agregar al carrito</a>`;
     }
     return false;
 };
