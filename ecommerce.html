@@ -7,7 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='ecommerce.css'>
 </head>
@@ -51,48 +52,19 @@
         </section>
         <section class="productos" id="productos">
             <h2>Productos</h2>
-            <div id="list-productos">
-
+            <div id="items" class="col-sm-12 row">
             </div>
         </section>
-
-
-                 <!-- <form class="form-productos" id="f-productos">
-                <label for="nombre-pr">Nombre del Producto</label>
-                <input type="text" id="nombre-pr" placeholder="Torta Galesa">
-                <label for="precio-pr">Ingrese Precio</label>
-                <input type="number" min="0.00" max="10000.00" step="0.50" id="precio-pr" placeholder="Precio">
-                <button type="button" type="button" class="button button-blue" id="btn-enviar-pr">Enviar Datos</button>
-                <button type="button" class="button button-blue" id="btn-listado-pr">Ver Listado</button>
-            </form>
-            <div class="listado-productos" id="list-productos">
-                <ul id="lista"></ul>
-                <table >
-                    <tbody>
-                        <tr id="tabla-listado">
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
-        <section class="Pedidos" id="pedidos">
-            <form action="" class="pedidos" id="pedidos">
-                <h2>Pedidos</h2>
-                <select name="Usuario">
-                    <option value="1">Persona1</option> 
-                    <option value="2">Persona2</option> 
-                    <option value="3">Persona3</option>
-                </select>
-                <select name="Producto">
-                    <option value="1">Producto1</option> 
-                    <option value="2">Producto2</option> 
-                    <option value="3">Producto3</option>
-                </select>    
-                <button type="button" class="button button-blue" id="btn-conf-compra">Confirmar Compra</button>
-                <button type="button" class="button button-blue" id="btn-listado-compra">Ver Listado</button>
-            </form>
-        </section> -->
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span>&euro;</p>
+            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+        </aside>
+        
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
