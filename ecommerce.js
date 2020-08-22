@@ -138,21 +138,32 @@ function renderItems(){
 
     function llenarCarrito(){
         let valorId = this.getAttribute('id');
-        let objetoSeleccionado = productos.filter(item => item.id == valorId);
+        let objetoSeleccionado = productos.find(item => item.id == valorId);
         carrito1.push(objetoSeleccionado);
+        localStorage.setItem("ListItems", JSON.stringify(carrito1));
+        alert('Objeto ' + objetoSeleccionado.descripcion + ' agregado');
         renderizarCarrito()
     }
     
      function renderizarCarrito() {
-    console.log(carrito1);
+            
 
-            let miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            for(let i = 0; i < carrito1.length; i++){
-                miNodo.textContent = carrito1[i].descripcion;
+            let nuevoObjeto = JSON.parse(localStorage.getItem("ListItems"));
 
+            for(let obj of nuevoObjeto){
+                let miNodo = document.createElement('li');
+                miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                miNodo.textContent = obj['descripcion'];
+                $carrito.appendChild(miNodo);
             }
-     }
 
-renderItems();
+            // for(let i = 0; i < nuevoObjeto.length; i++){
+
+            //     miNodo.textContent = nuevoObjeto[i].descripcion;
+            //     $carrito.appendChild(miNodo);
+            // }
+     }
+     
+     renderItems();
+
 }
